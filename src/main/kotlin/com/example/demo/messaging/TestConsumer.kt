@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component
 class TestConsumer {
     private val logger = LoggerFactory.getLogger(javaClass)
 
-//    @KafkaListener(topics = ["test"], groupId = "simple-kotlin-consumer")
-//    fun consume(message: String) {
-//        logger.info("message: $message")
-//    }
+    @KafkaListener(topics = ["test"], groupId = "group_id")
+    fun consume(message: String) {
+        logger.info("message: $message")
+    }
 }
